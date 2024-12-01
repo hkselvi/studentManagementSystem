@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d7ded7;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 1000; /*it makes header at the top*/
+}
+
+.logo {
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    width: 7%;
+    height: 7%;
+    margin-right: 0.2em; 
+    margin-left: 0.2em;
+    margin-bottom: 0.15em;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: #4CAF50;
+    margin-top: 1em;
+    margin-inline-end: 1em;
+}
+
+button{
+    padding: 0.7em 1.5em;
+    background-color: #85d489d7;
+    color: #1c1616;
+    border: 2px solid #082c08;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    top: 5em;
+    gap: 1em; /* Space between sections */
+    bottom: 2em;
+}
+
+.hidden{
+    display: none;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center content */
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3em;
+}
+
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em auto;
+    gap: 1em;
+    margin-bottom: 3em;
+}
+
+
+form label {
+    flex: 1 1 50%; /*flex-grow/flex-shrink/percentage is about width!*/
+    
+}
+
+form input, form button, form fieldset {
+    flex: 0.5 1 calc(50% - 1em); /* Half width on larger screens */
+    min-width: 5em;
+}
+
+/* Tables */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th, td {
+    padding: 0.8em;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 0.7rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0; /*makes the footer at the bottom*/
+}

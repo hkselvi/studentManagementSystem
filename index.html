@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Management System</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header> 
+            <div class="logo">
+                <img src="university-icon.svg" alt="Wisdom University Logo" class="logo-icon">
+                WISDOM UNIVERSITY <br>
+                Student Management System
+            </div>
+            <nav class="nav-buttons">
+                <button id="btnAddStudent">Add Student</button>
+                <button id="btnAddLecture">Add Lecture</button>
+                <button id="btnListStudents">List All Students</button>
+                <button id="btnListLectures">List All Lectures</button>
+            </nav>           
+        </header>
+
+        <main>
+
+            <h1>Welcome to Student Management System of Wisdom University </h1>
+
+            <section id="lectureFormSection" class="hidden"> 
+                <h2>Add Lecture</h2>
+                <form id="lectureForm">
+                    <label for="lectureCode">Lecture Code:</label><br>
+                    <input type="text" id="lectureCode" placeholder="Enter the lecture code.." required><br><br>
+                    <label for="lectureName">Lecture Name:</label><br>
+                    <input type="text" id="lectureName" placeholder="Enter the lecture name.." required><br><br>
+                    <label for="lectureInstructor">Lecture Instructor:</label><br>
+                    <input type="text" id="lectureInstructor" placeholder="Enter the lecture instructor.."required><br><br>
+                    <fieldset>
+                        <legend>Grading Scale:</legend>
+                        <label><input type="radio" name="gradingScale" value="7" required>Point Scale: 7</label><br>
+                        <label><input type="radio" name="gradingScale" value="10">Point Scale: 10</label>
+                    </fieldset><br>
+                    <button type="submit">Add Lecture</button>
+                </form>
+
+            </section>
+
+            <section id="lectureTableSection" class="hidden">
+                <h2>Lecture List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lecture Code</th>
+                            <th>Lecture Name</th>
+                            <th>Lecture Instructor</th>
+                            <th>Grading Scale</th>
+                            <th>Enrolled Student Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lectureTable">
+                        <!-- Lecture details..-->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="studentFormSection" class="hidden"> 
+                <h2>Add Student</h2>
+                <form id="studentForm">
+                    <label for="studentID">Student ID:</label><br>
+                    <input type="text" id="studentID" placeholder="Enter student ID number.." required><br><br>
+                    <label for="studentName">Name:</label><br>
+                    <input type="text" id="studentName" placeholder="Enter the student name.." required><br><br>
+                    <label for="studentSurname">Surname:</label><br>
+                    <input type="text" id="studentSurname" placeholder="Enter the student surname.." required><br><br>
+                    <label for="midtermScore">Midterm Score:</label><br>
+                    <input type="number" id="midtermScore" placeholder="Enter midterm score here.." min="0" max="100" required><br><br>
+                    <label for="finalScore">Final Score:</label><br>
+                    <input type="number" id="finalScore" placeholder="Enter final score here.." min="0" max="100" required><br><br>
+                    <label for="lectureDropdown">Select Lecture:</label>
+                    <select id="lectureDropdown" required>
+                        <option value="">Select Lecture</option>
+                    </select><br><br>
+                    <button type="submit">Add Student</button><br>
+                </form>
+
+            </section>
+
+            <section id="studentTableSection" class="hidden">
+                <h2>Student List</h2>
+                <input type="text" id="studentSearch" placeholder="Search students.." />
+                <button id="showPassed">Show Passed Students</button>
+                <button id="showFailed">Show Failed Students</button>
+                <button id="showAll">Show All Students</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Midterm Score</th>
+                            <th>Final Score</th>
+                            <th>Grade</th>
+                            <th>Lecture Code</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable">
+                        <!-- Student details -->
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Wisdom University Management System. All rights reserved.</p>
+        </footer>
+    </body>
+
+</html>
